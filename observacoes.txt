@@ -1,0 +1,1 @@
+Locale criado foi "en" e "en_US"
