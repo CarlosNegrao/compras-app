@@ -21,10 +21,10 @@ class CompraController extends Controller
             'descricao' => 'required',
             'numero_parcelas' => 'required|integer|min:1',
             'valor_parcela' => 'required|numeric|min:0.01',
-            'data_primeira_parcela' => 'required|date_format:d-m-Y',
+            'data_primeira_parcela' => 'required|date_format:d/m/Y',
         ]);
 
-        $dataInicial = Carbon::createFromFormat('d-m-Y', $request->data_primeira_parcela)->startOfDay();
+        $dataInicial = Carbon::createFromFormat('d/m/Y', $request->data_primeira_parcela)->startOfDay();
 
         $compra = Compra::create([
             'descricao' => $request->descricao,
