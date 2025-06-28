@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\CompraController;
+
+Route::get('/', [CompraController::class, 'dashboard']);
+Route::get('/compras/nova', [CompraController::class, 'create']);
+Route::post('/compras', [CompraController::class, 'store']);
