@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Nova Compra</title>
+    <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
 </head>
 <body>
     <h1>Nova Compra</h1>
